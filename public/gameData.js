@@ -5,13 +5,17 @@ var gameData = {
 	scenesData: [
 		{
 			name:"startScene", 
-			backgroundImage: "", 
-			unfixedImages: [
-				{ url: "static/images/scene00_unfixed.jpg", x: 0, y: 0 }
-			], 
-			fixedImages: [
-				{ url: "static/images/scene00_fixed.jpg", x: 0, y: 0 }
-			],
+			backgroundImage: "",
+			clickableImgs: [
+				{ 
+					img1Url: "static/images/scene00_unfixed.jpg", 
+					img2Url: "static/images/scene00_fixed.jpg", 
+					img1:"",
+					img2: "",
+					x: 0, 
+					y: 0 
+				}
+			]
 		}
 	]
 }

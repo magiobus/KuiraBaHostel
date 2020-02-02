@@ -1,10 +1,10 @@
 
 
 var gameFunctions = {
-	loadImgArray: function(imageArray){
-		console.log("cargando imagen =>  ", imageObject);
-		let img = loadImage(imageObject.url);
-		image(img, imageObject.x, imageObject.y);
+	loadGameImage: function(imageObj){
+		console.log("cargando imagen =>  ", imageObj);
+		let img = loadImage(imageObj.url);
+		image(img, imageObj.x, imageObj.y);
 	}
 	
 }
