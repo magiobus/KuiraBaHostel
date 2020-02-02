@@ -28,17 +28,14 @@ class ClickableImg {
   repair(){
     console.log("repaired")
     this.image = this.img2; 
-    let that = this;
-    // if(this.transitionUrls.length > 0){ setTimeout(function(){ that.transition() }, 100)};
-  }
+    //check if theres more
+    gameData.currentSceneObj.fixesCounter += 1;
 
-  transition(){
-    console.log("transition!")
-    let transitionObj = new TransitionImg(this.transitionUrls)
-    transitionObj.startTransition()
-    //wait
-    //deletes current image instance
-    //create a transitionImageObject that iterates trough array
+    //if fixes in the scene are done, make transition and change scene.
+    if(gameData.currentSceneObj.fixesCounter >= gameData.currentSceneObj.fixesRequired){
+      let transitionImgs = gameData.currentSceneObj.transitionImgs
+      gameData.currentSceneObj.canChangeToNextScene = true
+    }
 
   }
 }

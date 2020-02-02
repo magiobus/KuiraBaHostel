@@ -5,6 +5,9 @@ var gameData = {
 	scenesData: [
 		{
 			name:"scene00", 
+			fixesRequired: 1, 
+			fixesCounter: 0,
+			canChangeToNextScene: false, 
 			backgroundImage: "",
 			clickableImgs: [
 				{ 

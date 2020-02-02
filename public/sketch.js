@@ -9,8 +9,8 @@ function setup(){
   createCanvas(windowWidth, windowHeight); //creating canvas
   mgr = new SceneManager();
 
-  mgr.addScene ( scene1 );
-  mgr.addScene ( scene2 );
+  mgr.addScene ( gameScene );
+  mgr.addScene ( transitionScene );
   mgr.showNextScene();
 }
 
@@ -22,10 +22,10 @@ function mousePressed(){ mgr.handleEvent("mousePressed");}
 function keyPressed()
 {
     // You can optionaly handle the key press at global level...
-    if(key === '1'){
-      console.log("auch me presionaron el 1")
+    if(key === '1' && gameData.currentSceneObj.canChangeToNextScene){
+      console.log("auch me presionaron el 1 y ya puedo cambair de escena")
       //hacer transición y mandar a escena 2
-      
+      mgr.showScene( transitionScene );
     }  
     // ... then dispatch via the SceneManager.
     mgr.handleEvent("keyPressed");
@@ -33,7 +33,7 @@ function keyPressed()
 
 
 //////////////////SCENES SCENES SCENES ///////////////
-function scene1(){
+function gameScene(){
 
   this.setup = function(){
     console.log("setup scene1")
@@ -64,12 +64,13 @@ function scene1(){
   this.mousePressed = function(){ for(let i=0; i<1; i++){ clickableImgsLocal[i].clicked(mouseX, mouseY); } }
 } 
 
-function scene2(){
+function transitionScene(){
+  let transitionObj;
   this.setup = function(){
-    console.log("setup scene2")
-  }
+    console.log("setup transition scene", gameData)
+    transitionObj = new TransitionImg(gameData.currentSceneObj.transitionImgs)
+    transitionObj.startTransition()
 
-  this.draw = function(){
-    console.log("draw scene 2")
+    // cargar transición del current scene obj
   }
 } 
