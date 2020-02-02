@@ -18,7 +18,8 @@ var server = app.listen(process.env.PORT || 3000, listen);
 // Anything in the public directory will be served
 // This is just like python -m SimpleHTTPServer
 // We could also add routes, but aren't doing so here
-app.use(express.static('public'));
+app.use('/static', express.static('public'));
+
 
 // This call back just tells us that the server has started
 function listen() {
