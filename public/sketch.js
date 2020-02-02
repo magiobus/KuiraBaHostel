@@ -1,12 +1,11 @@
+let img;
+
 function setup() { 
-  createCanvas(1920, 1080);
-    console.log("mandando llamar funcion")
-  	// gameFunctions.loadGameImage("rawPhotos/DSC06961.JPG");
+  createCanvas(windowWidth, windowHeight);
+  img = loadImage('static/images/scene00_unfixed.jpg');
+ 
 } 
 
 function draw() { 
-  background(0,255,255);
-  ellipse(50,50,50,50);
+  image(img, 0, 0, windowWidth, windowHeight);
 }
-
-
