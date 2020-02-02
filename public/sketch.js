@@ -3,11 +3,21 @@ gameData.currentSceneName = "scene00"; //setting gameData current scene
 //vars to store current scene clickable imgs and transitions
 var clickableImgsLocal;
 var mgr; 
+let menuMusic
+
+    
+function preload(){
+  soundFormats('mp3', 'ogg');
+  menuMusic = loadSound('static/audio/kuirabaAudio128.mp3');
+}
+
 
 function setup(){
   createCanvas(windowWidth, windowHeight); //creating canvas
+
   mgr = new SceneManager();
 
+  mgr.addScene ( menu );
   mgr.addScene ( gameScene );
   mgr.addScene ( transitionScene );
   mgr.showNextScene();
@@ -25,13 +35,38 @@ function keyPressed()
       console.log("auch me presionaron el 1 y ya puedo cambiar de escena")
       //hacer transición y mandar a escena 2
       mgr.showScene( transitionScene );
-    }  
+    } 
+
     // ... then dispatch via the SceneManager.
     mgr.handleEvent("keyPressed");
 }
 
 
 //////////////////SCENES SCENES SCENES ///////////////
+
+function menu(){
+  let menuImg;
+  this.enter = function(){
+    createCanvas(windowWidth, windowHeight); //creating canvas
+    background(0)
+    menuImg = loadImage('static/images/menu_image.jpg'); 
+    menuMusic.setVolume(0.5);
+    menuMusic.play()
+    menuMusic.loop()
+    
+  }
+
+  this.draw = function(){
+    image(menuImg, 0, 0)
+  }
+
+  this.keyPressed = function(){
+    //PRESS ANY KEY TO START THE GAME
+    mgr.showScene( gameScene );
+  }
+}
+
+
 function gameScene(){
 
   this.enter = function(){
