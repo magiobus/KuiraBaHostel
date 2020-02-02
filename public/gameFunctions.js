@@ -1,10 +1,10 @@
 
 
 var gameFunctions = {
-	loadGameImage: function(imageUrl){
-		img = loadImage(imageUrl);
-		console.log("soy la funcion de la imagen =>", img);
-		image(img, 0, 0);
+	loadImgArray: function(imageArray){
+		console.log("cargando imagen =>  ", imageObject);
+		let img = loadImage(imageObject.url);
+		image(img, imageObject.x, imageObject.y);
 	}
 	
 }
