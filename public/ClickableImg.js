@@ -33,6 +33,7 @@ class ClickableImg {
 
     //if fixes in the scene are done, make transition and change scene.
     if(gameData.currentSceneObj.fixesCounter >= gameData.currentSceneObj.fixesRequired){
+      console.log("Ya terminé la escena, cargemos transiciones")
       let transitionImgs = gameData.currentSceneObj.transitionImgs
       gameData.currentSceneObj.canChangeToNextScene = true
     }

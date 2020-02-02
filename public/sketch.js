@@ -1,7 +1,7 @@
 gameData.currentSceneName = "scene00"; //setting gameData current scene
 
 //vars to store current scene clickable imgs and transitions
-var clickableImgsLocal = [];
+var clickableImgsLocal;
 var mgr; 
 
 function setup(){
@@ -22,7 +22,7 @@ function keyPressed()
 {
     // You can optionaly handle the key press at global level...
     if(key === '1' && gameData.currentSceneObj.canChangeToNextScene){
-      console.log("auch me presionaron el 1 y ya puedo cambair de escena")
+      console.log("auch me presionaron el 1 y ya puedo cambiar de escena")
       //hacer transición y mandar a escena 2
       mgr.showScene( transitionScene );
     }  
@@ -34,12 +34,13 @@ function keyPressed()
 //////////////////SCENES SCENES SCENES ///////////////
 function gameScene(){
 
-  this.setup = function(){
-    console.log("setup scene1")
+  this.enter = function(){
     createCanvas(windowWidth, windowHeight); //creating canvas
     background(0)
+    clickableImgsLocal = []
 
-    gameData.currentSceneName = "scene00";
+    console.log(" estoy en la escena de gamescene =>", gameData)
+
     gameData.currentSceneObj = gameData.scenesData.find(x => x.name === gameData.currentSceneName);
     gameFunctions.loadClickableImgs(gameData.currentSceneObj.clickableImgs) // loads all clickables imgs of the current scene
 
@@ -62,22 +63,36 @@ function gameScene(){
 } 
 
 function transitionScene(){
+  console.log("entramos al transition scene carnal")
   var transitionObj;
-  this.setup = function(){
+  this.enter = function(){
     gameFunctions.loadTransitionImgs(gameData.currentSceneObj.transitionImgs) // loads all clickables imgs of the current scene
     //create objects for every clickable image of the current scene
    // and adds it to local clickableImgs array
     transitionObj = new TransitionImg(gameData.currentSceneObj.transitionImgs);
+    let that = this
 
-    for(let i = 0; i<gameData.currentSceneObj.transitionImgs.length; i++) {  
-        setTimeout(()=>{
-          transitionObj.updateImage(gameData.currentSceneObj.transitionImgs[i])
-        },200*i)
+    for (let i = 0; i<gameData.currentSceneObj.transitionImgs.length; i++) {
+       (function(ind) {
+          setTimeout(function(){
+            if(i !== gameData.currentSceneObj.transitionImgs.length-1){
+              transitionObj.updateImage(gameData.currentSceneObj.transitionImgs[i])
+            } else {
+              that.changeScene()
+            }
+          }, 180 * ind);
+       })(i);
     }
+  }
 
 
-  
-
+  this.changeScene = function(){
+    console.log("a cambiar escena")
+    gameData.currentSceneName = gameData.currentSceneObj.destination
+    mgr.showScene( gameScene );
+    console.log("gameData.currentSceneName =>", gameData.currentSceneName)
 
   }
+
+
 } 
