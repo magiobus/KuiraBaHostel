@@ -447,9 +447,185 @@ var gameData = {
 				"static/images/scene011_transition046.jpg",
 				"static/images/scene011_transition047.jpg",
 				"static/images/scene011_transition048.jpg",
-				"static/images/scene011_transition049.jpg"
+				"static/images/scene011_transition049.jpg",
+                "static/images/scene011_transition050.jpg",
+                "static/images/scene011_transition051.jpg",
+                "static/images/scene011_transition052.jpg",
+                "static/images/scene011_transition053.jpg",
+                "static/images/scene011_transition054.jpg",
+                "static/images/scene011_transition055.jpg",
+                "static/images/scene011_transition056.jpg",
+                "static/images/scene011_transition057.jpg",
+                "static/images/scene011_transition058.jpg",
+                "static/images/scene011_transition059.jpg",
+                "static/images/scene011_transition060.jpg",
+                "static/images/scene011_transition061.jpg",
+                "static/images/scene011_transition062.jpg",
+                "static/images/scene011_transition063.jpg",
+                "static/images/scene011_transition064.jpg",
+                "static/images/scene011_transition065.jpg",
+                "static/images/scene011_transition066.jpg",
+                "static/images/scene011_transition067.jpg",
+                "static/images/scene011_transition068.jpg",
+                "static/images/scene011_transition069.jpg",
+                "static/images/scene011_transition070.jpg"
 
 			]
 		},
+				{
+			name:"scene012", 
+			destination: "scene013", 
+			fixesRequired: 1, 
+			fixesCounter: 0,
+			canChangeToNextScene: false, 
+			backgroundImage: "",
+			clickableImgs: [
+				{ 
+					img1Url: "static/images/scene012__unfixed.jpg", 
+					img2Url: "static/images/scene012__fixed.jpg", 
+					img1:"",
+					img2: "",
+					x: 0, 
+					y: 0
+				}
+			],
+			transitionImgs:[
+				"static/images/scene012_transition00.jpg",
+				"static/images/scene012_transition01.jpg",
+				"static/images/scene012_transition02.jpg",
+				"static/images/scene012_transition03.jpg",
+				"static/images/scene012_transition04.jpg"
+				
+
+			]
+				name:"scene013", 
+			destination: "scene014", 
+			fixesRequired: 1, 
+			fixesCounter: 0,
+			canChangeToNextScene: false, 
+			backgroundImage: "",
+			clickableImgs: [
+				{ 
+					img1Url: "static/images/scene013__unfixed.jpg", 
+					img2Url: "static/images/scene013__fixed.jpg", 
+					img1:"",
+					img2: "",
+					x: 0, 
+					y: 0
+				}
+			],
+			transitionImgs:[
+				"static/images/scene13_transition00.jpg",
+				"static/images/scene13_transition01.jpg",
+				"static/images/scene13_transition02.jpg",
+				"static/images/scene13_transition03.jpg",
+				"static/images/scene13_transition04.jpg",
+				"static/images/scene13_transition05.jpg",
+				"static/images/scene13_transition06.jpg",
+				"static/images/scene13_transition07.jpg",
+				"static/images/scene13_transition08.jpg",
+				"static/images/scene13_transition09.jpg",
+				"static/images/scene13_transition010.jpg",
+				"static/images/scene13_transition011.jpg",
+				"static/images/scene13_transition012.jpg",
+				"static/images/scene13_transition013.jpg",
+				"static/images/scene13_transition014.jpg",
+				"static/images/scene13_transition015.jpg",
+				"static/images/scene13_transition016.jpg",
+				"static/images/scene13_transition017.jpg",
+				"static/images/scene13_transition018.jpg",
+				"static/images/scene13_transition019.jpg",
+				"static/images/scene13_transition020.jpg",
+				"static/images/scene13_transition021.jpg",
+				"static/images/scene13_transition022.jpg",
+				"static/images/scene13_transition023.jpg",
+				"static/images/scene13_transition024.jpg",
+				"static/images/scene13_transition025.jpg",
+				"static/images/scene13_transition026.jpg",
+				"static/images/scene13_transition027.jpg"
+
+
+			]
+		},
+				{
+			name:"scene014", 
+			destination: "scene015", 
+			fixesRequired: 1, 
+			fixesCounter: 0,
+			canChangeToNextScene: false, 
+			backgroundImage: "",
+			clickableImgs: [
+				{ 
+					img1Url: "static/images/scene014__unfixed.jpg", 
+					img2Url: "static/images/scene014__fixed.jpg", 
+					img1:"",
+					img2: "",
+					x: 0, 
+					y: 0
+				}
+			],
+			transitionImgs:[
+				"static/images/scene14_transition00.jpg",
+				"static/images/scene14_transition01.jpg",
+				"static/images/scene14_transition02.jpg",
+				"static/images/scene14_transition03.jpg",
+				"static/images/scene14_transition04.jpg",
+				"static/images/scene14_transition05.jpg",
+				"static/images/scene14_transition06.jpg",
+				"static/images/scene14_transition07.jpg",
+				"static/images/scene14_transition08.jpg",
+				"static/images/scene14_transition09.jpg",
+				"static/images/scene14_transition10.jpg",
+				"static/images/scene14_transition11.jpg",
+				"static/images/scene14_transition12.jpg",
+				"static/images/scene14_transition13.jpg",
+				"static/images/scene14_transition14.jpg",
+				"static/images/scene14_transition15.jpg",
+				"static/images/scene14_transition16.jpg",
+				"static/images/scene14_transition17.jpg",
+				"static/images/scene14_transition18.jpg",
+				"static/images/scene14_transition19.jpg",
+				"static/images/scene14_transition20.jpg",
+				"static/images/scene14_transition21.jpg",
+				"static/images/scene14_transition22.jpg",
+				"static/images/scene14_transition23.jpg",
+				"static/images/scene14_transition24.jpg",
+				"static/images/scene14_transition25.jpg",
+				"static/images/scene14_transition26.jpg",
+				"static/images/scene14_transition27.jpg"
+				
+				
+			]
+					name:"scene015", 
+			destination: "scene016", 
+			fixesRequired: 1, 
+			fixesCounter: 0,
+			canChangeToNextScene: false, 
+			backgroundImage: "",
+			clickableImgs: [
+				{ 
+					img1Url: "static/images/scene015__unfixed.jpg", 
+					img2Url: "static/images/scene015__fixed.jpg", 
+					img1:"",
+					img2: "",
+					x: 0, 
+					y: 0
+				}
+			],
+			transitionImgs:[
+				"static/images/scene15_transition00.jpg",
+				"static/images/scene15_transition01.jpg",
+				"static/images/scene15_transition02.jpg",
+				"static/images/scene15_transition03.jpg",
+				"static/images/scene15_transition04.jpg",
+				"static/images/scene15_transition05.jpg",
+				"static/images/scene15_transition06.jpg",
+				"static/images/scene15_transition07.jpg",
+				"static/images/scene15_transition08.jpg",
+				"static/images/scene15_transition09.jpg",
+				
+			]
+		},
+		
 	]
 }
