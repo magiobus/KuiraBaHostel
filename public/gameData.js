@@ -21,14 +21,14 @@ var gameData = {
 				}
 			],
 			transitionImgs:[
-				"static/images/scene00_transition00.jpg",
-				"static/images/scene00_transition01.jpg",
-				"static/images/scene00_transition02.jpg",
-				"static/images/scene00_transition03.jpg",
-				"static/images/scene00_transition04.jpg",
-				"static/images/scene00_transition05.jpg",
-				"static/images/scene00_transition06.jpg",
-				"static/images/scene00_transition07.jpg"
+				"static/images/scene00_transition00.png",
+				"static/images/scene00_transition01.png",
+				"static/images/scene00_transition02.png",
+				"static/images/scene00_transition03.png",
+				"static/images/scene00_transition04.png",
+				"static/images/scene00_transition05.png",
+				"static/images/scene00_transition06.png",
+				"static/images/scene00_transition07.png"
 			]
 		},
 			{

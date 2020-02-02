@@ -2,7 +2,6 @@ gameData.currentSceneName = "scene00"; //setting gameData current scene
 
 //vars to store current scene clickable imgs and transitions
 var clickableImgsLocal = [];
-var transitionImgsLocal = [];
 var mgr; 
 
 function setup(){
@@ -43,7 +42,6 @@ function gameScene(){
     gameData.currentSceneName = "scene00";
     gameData.currentSceneObj = gameData.scenesData.find(x => x.name === gameData.currentSceneName);
     gameFunctions.loadClickableImgs(gameData.currentSceneObj.clickableImgs) // loads all clickables imgs of the current scene
-    gameFunctions.loadTransitionImgs(gameData.currentSceneObj.transitionImgs) // loads all clickables imgs of the current scene
 
     //create objects for every clickable image of the current scene
    // and adds it to local clickableImgs array
@@ -60,17 +58,26 @@ function gameScene(){
     }
   }
 
-
   this.mousePressed = function(){ for(let i=0; i<1; i++){ clickableImgsLocal[i].clicked(mouseX, mouseY); } }
 } 
 
 function transitionScene(){
-  let transitionObj;
+  var transitionObj;
   this.setup = function(){
-    console.log("setup transition scene", gameData)
-    transitionObj = new TransitionImg(gameData.currentSceneObj.transitionImgs)
-    transitionObj.startTransition()
+    gameFunctions.loadTransitionImgs(gameData.currentSceneObj.transitionImgs) // loads all clickables imgs of the current scene
+    //create objects for every clickable image of the current scene
+   // and adds it to local clickableImgs array
+    transitionObj = new TransitionImg(gameData.currentSceneObj.transitionImgs);
 
-    // cargar transición del current scene obj
+    for(let i = 0; i<gameData.currentSceneObj.transitionImgs.length; i++) {  
+        setTimeout(()=>{
+          transitionObj.updateImage(gameData.currentSceneObj.transitionImgs[i])
+        },200*i)
+    }
+
+
+  
+
+
   }
 } 
